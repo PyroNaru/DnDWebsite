@@ -161,6 +161,14 @@ body::before {
 .alert { color: #ffb347; }
 .neutral { color: #8f8f8f; }
 
+.archive-item {
+  cursor: pointer;
+}
+
+.archive-item:active {
+  transform: translateX(3px) scale(0.99);
+  background: rgba(255, 255, 255, 0.08);
+}
 
 
 
