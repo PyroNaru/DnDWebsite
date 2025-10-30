@@ -249,3 +249,35 @@ section h3 {
 .return-link:hover {
   color: #ff5c5c;
 }
+
+/*Images*/
+.evidence {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.evidence h3 {
+  color: #c41e3a;
+  margin-bottom: 0.75rem;
+}
+
+.evidence img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  filter: grayscale(90%) contrast(110%) brightness(85%);
+}
+
+.evidence img:hover {
+  filter: none;
+  transition: filter 0.4s ease;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
