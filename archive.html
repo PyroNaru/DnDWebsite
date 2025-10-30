@@ -3,27 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G.O.O.N</title>
+  <title>Archives — Global Occult and Obscurity Neutralization</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1 class="logo">G.O.O.N — Global Occult and Obscurity Neutralization</h1>
+    <h1 class="logo">G.O.O.N — Archives</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="archive.html">Archives</a>
-      <a href="">Clearance</a>
+      <a href="archive.html" class="active">Archives</a>
+      <a href="clearance.html">Clearance</a>
       <a href="about.html">About</a>
     </nav>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Welcome, Agent</h2>
-      <p>Access to classified archives is restricted. Unauthorized access will be logged.</p>
-      <button>Enter Database</button>
+    <section class="archives">
+      <h2>Classified Files</h2>
+      <div class="archive-list">
+
+        <div class="archive-item" data-clearance="2">
+          <h3>File-002 — Skulk Prophet</h3>
+          <p>Status: Active Containment</p>
+        </div>
+
+        <div class="archive-item" data-clearance="3">
+          <h3>File-007 — The Crimson Choir</h3>
+          <p>Status: Restricted</p>
+        </div>
+
+        <div class="archive-item" data-clearance="4">
+          <h3>File-013 — Project Eclipsed Sun</h3>
+          <p>Status: O4 Directive Only</p>
+        </div>
+
+      </div>
     </section>
   </main>
+
+  <script>
+    const userLevel = parseInt(localStorage.getItem("clearanceLevel")) || 0;
+    document.querySelectorAll(".archive-item").forEach(item => {
+      const required = parseInt(item.dataset.clearance);
+      if (userLevel < required) {
+        item.style.filter = "blur(3px)";
+        item.style.pointerEvents = "none";
+        item.querySelector("h3").textContent = "— CLASSIFIED —";
+      }
+    });
+  </script>
 
   <footer>
     <p>© 1923 Global Occult and Obscurity Neutralization | Confidential</p>
