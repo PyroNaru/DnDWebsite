@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File-001 — The Whispering Vein | Lex Obscura Initiative</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>
+    const userLevel = parseInt(localStorage.getItem("clearanceLevel")) || 0;
+    const requiredLevel = 2;
+    if (userLevel < requiredLevel) {
+      document.write("<h1 style='color:red;text-align:center;margin-top:20vh;'>ACCESS DENIED</h1>");
+      throw new Error("Insufficient Clearance");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="logo">L.O.I — File 001</h1>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../archive.html">Archives</a>
+      <a href="../../clearance.html">Clearance</a>
+      <a href="../../about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="file-entry">
+      <h2>File-002 — Hollow Caller</h2>
+      <section class="evidence">
+        <h3>Visual Record:</h3>
+        <img src="../images/file001.jpg" alt="Recovered still of The Beast>
+        <p class="caption">Recovered photo from AshGrave. Visual distortion confirmed genuine.</p>
+      </section>
+      <div class="metadata">
+        <p><strong>Threat Level:</strong> Code Crimson</p>
+        <p><strong>Required Clearance:</strong> Level 2</p>
+        <p><strong>Status:</strong> Unknown</p>
+        <p><strong>Last Updated:</strong> October 1973</p>
+      </div>
+
+      <hr>
+
+      <section class="description">
+        <h3>Description:</h3>
+        <p>The Beast, refered by the locals as Ulthrash or simply the beast, is a gigantic bone-like deer anomaly discovered on the mountains
+            of AshGrave. Its presence seems to induce a mutagenic like evolutions on entities up to 100 kilometers away. 
+            Visual and Auditory phenomena reported by research personnel include whispers in an unknown language. Researches were only able to make out
+            one word, "Prepare"
+        </p>
+
+        <p>Exposure to presence emitted by the Ulthrash has resulted in psychological deterioration and agressiveness, and in later cases, 
+            vbody mutations such as tentacles and increased muscle mass. 
+        </p>
+      </section>
+
+      <section class="containment">
+        <h3>Containment Protocol:</h3>
+        <ul>
+          <li>None as of late, If seen run as far as possible</li>
+        </ul>
+      </section>
+
+      <section class="addendum">
+        <h3>Addendum 001-A:</h3>
+        <p><em>Following Incident stated in Incident Report: Case File 0412-AE, any procedure to contain is to be terminated and all residents 
+            affected must be evacuated as soon as possible.
+        </em></p>
+      </section>
+
+      <a href="../../archive.html" class="return-link">← Return to Archives</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 1923 Global Occult and Obscurity Neutralization | Confidential</p>
+  </footer>
+</body>
+</html>
