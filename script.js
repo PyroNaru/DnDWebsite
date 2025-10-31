@@ -1,4 +1,9 @@
 // ===== clearance login (same as before) =====
+if (localStorage.getItem("clearanceLevel") === null) {
+  localStorage.setItem("clearanceLevel", 0);
+}
+
+
 const loginForm = document.getElementById("loginForm");
 if (loginForm) {
   loginForm.addEventListener("submit", function(e) {
@@ -53,5 +58,29 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("No data-file attribute on archive item:", item);
       }
     });
+  });
+});
+
+
+// ===== Logout / Reset Clearance =====
+window.addEventListener("load", () => {
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (!logoutBtn) return; // If not found, skip
+
+  const userLevel = Number(localStorage.getItem("clearanceLevel")) || 0;
+
+  // Debug line (you can remove this later)
+  console.log("Detected clearance level:", userLevel);
+
+  if (userLevel > 0) {
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    if (confirm("Are you sure you want to log out and reset clearance?")) {
+      localStorage.setItem("clearanceLevel", 0);
+      alert("Clearance reset to Level 0. You are now logged out.");
+      location.reload();
+    }
   });
 });
