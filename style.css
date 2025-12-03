@@ -1,14 +1,13 @@
-/* ===== Base Reset ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Global Styles ===== */
+/*Whole page style*/
 body {
   font-family: 'Inter', 'Roboto Mono', monospace;
-  background-color: #0a0a0a; /* near black */
+  background-color: #0a0a0a; 
   color: #d0d0d0;
   line-height: 1.6;
   min-height: 100vh;
@@ -16,10 +15,10 @@ body {
   flex-direction: column;
 }
 
-/* ===== Header ===== */
+/*TopNav*/
 header {
   background-color: #111;
-  border-bottom: 2px solid #4a0000; /* blood red accent */
+  border-bottom: 2px solid #4a0000; 
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -48,7 +47,7 @@ nav a:hover {
   text-shadow: 0 0 5px #c41e3a;
 }
 
-/* ===== Main Section ===== */
+/* Main Section */
 main {
   flex: 1;
   display: flex;
@@ -77,7 +76,7 @@ main {
   margin-bottom: 2rem;
 }
 
-/* ===== Buttons ===== */
+/* Buttons */
 button {
   background: #c41e3a;
   color: #fff;
@@ -95,7 +94,7 @@ button:hover {
   box-shadow: 0 0 10px #c41e3a;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   background: #111;
   text-align: center;
@@ -105,7 +104,7 @@ footer {
   color: #666;
 }
 
-/* ===== Subtle Scanline / Texture Effect ===== */
+/* Subtle Scanline / Texture Effect */
 body::before {
   content: "";
   position: fixed;

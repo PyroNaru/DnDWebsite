@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../style.css">
   <script>
     const userLevel = parseInt(localStorage.getItem("clearanceLevel")) || 0;
-    const requiredLevel = 2;
+    const requiredLevel = 3;
     if (userLevel < requiredLevel) {
       document.write("<h1 style='color:red;text-align:center;margin-top:20vh;'>ACCESS DENIED</h1>");
       throw new Error("Insufficient Clearance");
