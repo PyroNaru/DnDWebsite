@@ -6,15 +6,25 @@
   <title>File 004 | Global Occult and Obscurity Neutralization</title>
   <link rel="stylesheet" href="../../style.css">
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
     const userLevel = parseInt(localStorage.getItem("clearanceLevel")) || 0;
-    const requiredLevel = 2;
+    const requiredLevel = 2; 
+
     if (userLevel < requiredLevel) {
-      document.write("<h1 style='color:red;text-align:center;margin-top:20vh;'>ACCESS DENIED</h1>");
-      throw new Error("Insufficient Clearance");
+      document.body.innerHTML = `
+        <h1 style="color:red;text-align:center;margin-top:20vh;font-family:monospace;">
+          ACCESS DENIED — INSUFFICIENT CLEARANCE
+        </h1>
+      `;
+    } else {
+      // reveal page content
+      document.getElementById("protectedContent").style.display = "block";
     }
+  });
   </script>
 </head>
 <body>
+  <div id="protectedContent" style="display:none;"></div>
   <header>
     <h1 class="logo">G.O.O.N — File 004</h1>
     <nav>
@@ -74,5 +84,6 @@
   <footer>
     <p>© 1923 Global Occult and Obscurity Neutralization | Confidential</p>
   </footer>
+  </div>
 </body>
 </html>
