@@ -22,9 +22,9 @@ if (loginForm) {
     let level = null;
 
     // simple “codes” — change to whatever you like
-    if (code === "custos") level = 2;
-    else if (code === "praetor") level = 2;
-    else if (code === "praetor") level = 3;
+    if (code === "misty") level = 2;
+    else if (code === "ralph") level = 2;
+    else if (code === "sanday") level = 3;
     else if (code === "archon") level = 4;
     else if (code === "deus") level = 5;
 
