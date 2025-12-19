@@ -1,3 +1,12 @@
+//hamburger menu
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+
 // ===== clearance login (same as before) =====
 if (localStorage.getItem("clearanceLevel") === null) {
   localStorage.setItem("clearanceLevel", 0);
@@ -14,6 +23,7 @@ if (loginForm) {
 
     // simple “codes” — change to whatever you like
     if (code === "custos") level = 2;
+    else if (code === "praetor") level = 2;
     else if (code === "praetor") level = 3;
     else if (code === "archon") level = 4;
     else if (code === "deus") level = 5;

@@ -4,8 +4,117 @@
   box-sizing: border-box;
 }
 
+.hamburger {
+  display: none;
+}
+
+/* for the phone */
+@media (max-width: 700px) {
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: 1px solid #c41e3a;
+    color: #c41e3a;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+  }
+
+
+  nav {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a,
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .logout-btn {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  main {
+  flex: unset;
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+  text-align: left;
+  padding: 1.5rem 1rem;
+  }
+
+  .intro {
+    padding: 1.5rem;
+  }
+
+  .archive-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .archives {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+
+  .archives h2 {
+    text-align: left;
+  }
+
+  .archive-list {
+    margin-top: 1rem;
+  }
+
+  .archive-item {
+    padding: 1rem;
+  }
+
+  .file-entry {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+
+  .metadata {
+    font-size: 0.85rem;
+  }
+
+  button,
+  .return-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 /*Whole page style*/
 body {
+  font-size: 16px;
+  padding: 10px;
   font-family: 'Inter', 'Roboto Mono', monospace;
   background-color: #0a0a0a; 
   color: #d0d0d0;
